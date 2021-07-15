@@ -1,7 +1,6 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.0.0"
     id("io.micronaut.application") version "1.5.3"
-    id("io.freefair.lombok") version "6.0.0-m2"
 }
 
 version = "0.1"
@@ -25,6 +24,8 @@ dependencies {
     implementation("io.micronaut:micronaut-runtime")
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-validation")
+    annotationProcessor("org.projectlombok:lombok")
+    compileOnly("org.projectlombok:lombok")
 
 }
 
